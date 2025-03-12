@@ -1,11 +1,11 @@
 def dfs():
     global cnt
-    delta=[[-1, 1], [0, 1], [1, 1]] # 상우, 우, 하우
+    delta=[[-1, 1], [0, 1], [1, 1]] # 상우, 우, 하우 (최대한 위쪽으로 붙어야 많은 파이프를 배치할 수 있음)
     while stack:
         # print(visited)
         i, j=stack.pop()
 
-        if j==M-2: # 종료조건
+        if j==M-1: # 종료조건
             cnt+=1 # 갈 수 있는 길 계수
             return
 
@@ -17,7 +17,6 @@ def dfs():
                     stack.append([ni, nj])
                     visited[ni][nj]=1
                     break
-
 
 '''
 5 5
