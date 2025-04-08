@@ -7,6 +7,7 @@ def solution(i, j, cost):
             return
 
     delta=[[-1, 0], [0, 1], [1, 1]] # 하, 우, 우하
+    # 대각선 하나=아래+오른쪽
 
     for i in range(3):
         ni, nj=i+delta[i][0], j+delta[i][1]
